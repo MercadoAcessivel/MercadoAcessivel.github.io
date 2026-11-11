@@ -1,10 +1,3 @@
-/*
-  Mercado Acessível - script.js
-
-  PARA ATIVAR O FORMULÁRIO DE CONTATO:
-  escreva o e-mail do grupo entre as aspas da linha abaixo.
-  Exemplo: const emailDoGrupo = "grupo@exemplo.com";
-*/
 var emailDoGrupo = "";
 
 (function () {
@@ -12,7 +5,6 @@ var emailDoGrupo = "";
 
     var raiz = document.documentElement;
 
-    /* ---------- Animação ao rolar ---------- */
     var blocos = document.querySelectorAll(".animar");
 
     if ("IntersectionObserver" in window) {
@@ -30,7 +22,6 @@ var emailDoGrupo = "";
         });
     }
 
-    /* ---------- Barra de acessibilidade ---------- */
     var PASSOS = [90, 100, 115, 130, 150];
     var passo = 1;
     var contraste = false;
@@ -40,7 +31,7 @@ var emailDoGrupo = "";
     }
 
     function gravar(chave, valor) {
-        try { window.localStorage.setItem(chave, valor); } catch (e) { /* sem armazenamento */ }
+        try { window.localStorage.setItem(chave, valor); } catch (e) { return; }
     }
 
     var salvoPasso = parseInt(ler("ma-fonte"), 10);
@@ -126,7 +117,6 @@ var emailDoGrupo = "";
 
     aplicar("");
 
-    /* ---------- Pular para o conteúdo ---------- */
     var pular = document.querySelector(".pular-conteudo");
     var principal = document.getElementById("conteudo");
     if (pular && principal) {
@@ -137,7 +127,6 @@ var emailDoGrupo = "";
         });
     }
 
-    /* ---------- Menu: página atual e foco ao navegar ---------- */
     var linksMenu = Array.prototype.slice.call(document.querySelectorAll(".navegacao a"));
     var secoesMenu = linksMenu.map(function (a) {
         return document.getElementById(a.getAttribute("href").slice(1));
@@ -172,7 +161,6 @@ var emailDoGrupo = "";
     window.addEventListener("resize", marcarAtual);
     marcarAtual();
 
-    /* Ao usar um link interno, leva o foco ao título da seção (ajuda leitores de tela) */
     document.addEventListener("click", function (evento) {
         var link = evento.target.closest ? evento.target.closest('a[href^="#"]') : null;
         if (!link || link.classList.contains("pular-conteudo")) { return; }
@@ -183,7 +171,6 @@ var emailDoGrupo = "";
         window.setTimeout(function () { titulo.focus({ preventScroll: true }); }, 50);
     });
 
-    /* ---------- Formulário de contato ---------- */
     var formulario = document.getElementById("formulario-contato");
 
     if (formulario) {
