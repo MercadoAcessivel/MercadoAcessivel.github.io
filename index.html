@@ -3,126 +3,591 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início | Mercado Acessível</title>
+    <title>Mercado Acessível | Carrinho com sensores para apoiar as compras</title>
+    <meta name="description" content="Projeto acadêmico do SENAC RN: um carrinho com sensores para ajudar pessoas com deficiência visual, baixa visão e idosos nas compras do supermercado.">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo principal</a>
     <header class="cabecalho">
-        <a href="index.html" class="logo">Mercado<span>Acessível</span></a>
- 
-        <nav class="navegacao">
-            <a href="index.html" class="ativo">Início</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="funcionamento.html">Como funciona</a>
-            <a href="aplicativo.html">Aplicativo</a>
-            <a href="matematica.html">Matemática</a>
-            <a href="mapa.html">Mapa</a>
-            <a href="contato.html">Contato</a>
+        <a href="#inicio" class="logo" aria-label="Mercado Acessível, ir para o início da página">Mercado<span>Acessível</span></a>
+
+        <nav class="navegacao" aria-label="Menu principal">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#funcionamento">Como funciona</a>
+            <a href="#mapa">Mapa</a>
+            <a href="#contato">Contato</a>
         </nav>
     </header>
- 
-    <main>
-        <section class="hero">
-            <div>
-                <span class="etiqueta">Projeto acadêmico do SENAC RN</span>
-                <h1>Mercado Acessível</h1>
-                <p>
-                    Um projeto que busca facilitar as compras de pessoas com
-                    deficiência visual, baixa visão e idosos com dificuldade
-                    de orientação dentro do supermercado.
-                </p>
-                <p>
-                    A proposta reúne um carrinho com sensores, que avisa
-                    quando há algo por perto, e um aplicativo para organizar
-                    a lista de compras e acompanhar os gastos.
-                </p>
-                <div class="botoes">
-                    <a class="botao" href="sobre.html">Conhecer o projeto</a>
-                    <a class="botao botao-secundario" href="funcionamento.html">Entender o funcionamento</a>
+
+    <main id="conteudo" tabindex="-1">
+
+        <!-- ===================== INÍCIO ===================== -->
+        <section id="inicio" aria-labelledby="t-inicio">
+            <div class="hero">
+                <div>
+                    <span class="etiqueta">Projeto acadêmico do SENAC RN</span>
+                    <h1 id="t-inicio">Mercado Acessível</h1>
+                    <p>
+                        Um projeto que busca facilitar as compras de pessoas com
+                        deficiência visual, baixa visão e idosos com dificuldade
+                        de orientação dentro do supermercado.
+                    </p>
+                    <p>
+                        A proposta reúne um carrinho com sensores, que avisa
+                        quando há algo por perto, e um aplicativo para organizar
+                        a lista de compras e acompanhar os gastos.
+                    </p>
+                    <div class="botoes">
+                        <a class="botao" href="#sobre">Conhecer o projeto</a>
+                        <a class="botao botao-secundario" href="#funcionamento">Entender o funcionamento</a>
+                    </div>
+                </div>
+
+                <div class="hero-destaque">
+                    <h2>Em desenvolvimento</h2>
+                    <p>
+                        Esta é uma proposta de trabalho. O carrinho e o aplicativo
+                        ainda estão sendo planejados e testes ainda precisam ser feitos.
+                    </p>
                 </div>
             </div>
- 
-            <div class="hero-destaque">
-                <h2>Em desenvolvimento</h2>
-                <p>
-                    Esta é uma proposta de trabalho. O carrinho e o aplicativo
-                    ainda estão sendo planejados e testes ainda precisam ser feitos.
-                </p>
+
+            <div class="secao animar">
+                <div class="secao-texto">
+                    <h2>O problema que motivou a ideia</h2>
+                    <p>
+                        Um supermercado tem corredores estreitos, prateleiras
+                        altas, pessoas passando e carrinhos parados no meio do
+                        caminho. Para quem enxerga pouco ou não enxerga, andar
+                        por esse espaço e achar o produto certo dá muito trabalho.
+                        Conferir preços e quantidades também depende, em geral,
+                        de ler etiquetas pequenas.
+                    </p>
+                    <p>
+                        Muitas vezes a pessoa depende de alguém para ajudar.
+                        O grupo quer estudar formas de dar mais apoio durante
+                        as compras, sem tirar a atenção e a decisão de quem
+                        está comprando.
+                    </p>
+                </div>
             </div>
-            
-        </section>
- 
-        <section class="secao animar">
-            <div class="secao-texto">
-                <h2>O problema que motivou a ideia</h2>
-                <p>
-                    Um supermercado tem corredores estreitos, prateleiras
-                    altas, pessoas passando e carrinhos parados no meio do
-                    caminho. Para quem enxerga pouco ou não enxerga, andar
-                    por esse espaço e achar o produto certo dá muito trabalho.
-                </p>
-                <p>
-                    Muitas vezes a pessoa depende de alguém para ajudar.
-                    O grupo quer estudar formas de dar mais apoio durante
-                    as compras, sem tirar a atenção e a decisão de quem
-                    está comprando.
-                </p>
+
+            <div class="secao secao-suave animar">
+                <div class="titulo-secao">
+                    <h2>O que a proposta prevê</h2>
+                    <p>Três partes que se completam. O funcionamento do carrinho é explicado na seção Como funciona.</p>
+                </div>
+
+                <div class="grade tres-colunas">
+                    <article class="cartao">
+                        <h3>Sensores</h3>
+                        <p>Três sensores ultrassônicos medem a distância de objetos na frente e dos lados do carrinho.</p>
+                    </article>
+                    <article class="cartao">
+                        <h3>Alertas sonoros</h3>
+                        <p>Um buzzer e LEDs avisam quando algo está perto, para a pessoa ter tempo de reagir.</p>
+                    </article>
+                    <article class="cartao">
+                        <h3>Aplicativo</h3>
+                        <p>Lista de compras, informações dos produtos e leitura em áudio, tudo pensado para ser simples.</p>
+                    </article>
+                </div>
+                <div class="botoes">
+                    <a class="botao botao-secundario" href="#funcionamento">Ver como o carrinho funciona</a>
+                </div>
             </div>
-        </section>
- 
-        <section class="secao secao-suave animar">
-            <div class="titulo-secao">
-                <h2>O que a proposta prevê</h2>
-                <p>Quatro partes que se completam. Cada uma é explicada em detalhe nas outras páginas.</p>
-            </div>
- 
-            <div class="grade tres-colunas">
-                <article class="cartao">
-                    <h3>Sensores</h3>
-                    <p>Três sensores ultrassônicos medem a distância de objetos na frente e dos lados do carrinho.</p>
-                </article>
-                <article class="cartao">
-                    <h3>Alertas sonoros</h3>
-                    <p>Um buzzer e LEDs avisam quando algo está perto, para a pessoa ter tempo de reagir.</p>
-                </article>
-                <article class="cartao">
-                    <h3>Aplicativo</h3>
-                    <p>Lista de compras, informações dos produtos e leitura em áudio, tudo pensado para ser simples.</p>
-                </article>
-            </div>
-            <div class="botoes">
-                <a class="botao botao-secundario" href="funcionamento.html">Ver como o carrinho funciona</a>
-                <a class="botao botao-secundario" href="aplicativo.html">Ver o aplicativo</a>
-            </div>
-        </section>
- 
-        <section class="secao animar">
-            <div class="secao-texto">
-                <h2>A matemática no projeto</h2>
-                <p>
-                    O carrinho mede distâncias e o aplicativo faz contas de
-                    soma, subtração, porcentagem e comparação de preços.
-                    Também será preciso organizar os dados dos testes para
-                    saber se os alertas estão funcionando bem.
-                </p>
-                <a class="link" href="matematica.html">Ver as contas com exemplos</a>
+
+            <div class="faixa">
+                <div>
+                    <h2>Visita ao CADV</h2>
+                    <p>O grupo visitou o CADV para entender melhor as necessidades de quem usaria a proposta.</p>
+                </div>
+                <a class="botao" href="#visita-cadv">Ver a visita</a>
             </div>
         </section>
- 
-        <section class="faixa">
-            <div>
-                <h2>Visita ao CADV</h2>
-                <p>O grupo visitou o CADV para entender melhor as necessidades de quem usaria a proposta.</p>
+
+        <!-- ===================== SOBRE ===================== -->
+        <section id="sobre" class="pagina" aria-labelledby="t-sobre">
+            <div class="cabecalho-pagina">
+                <h2 id="t-sobre">Sobre o projeto</h2>
+                <p>De onde veio a ideia, a quem ela se destina e em que ponto o trabalho está.</p>
             </div>
-            <a class="botao" href="sobre.html#visita-cadv">Ver a visita</a>
+
+            <div class="secao">
+                <div class="secao-texto">
+                    <h3>O que é o Mercado Acessível</h3>
+                    <p>
+                        É um projeto acadêmico de estudantes do SENAC RN. A ideia
+                        é um carrinho de supermercado com três sensores
+                        ultrassônicos, um controlador eletrônico, LEDs e um buzzer,
+                        junto com um aplicativo que ajuda a organizar a compra e
+                        a controlar o orçamento.
+                    </p>
+
+                    <h3>Para quem a proposta se destina</h3>
+                    <ul class="lista">
+                        <li>Pessoas com deficiência visual.</li>
+                        <li>Pessoas com baixa visão.</li>
+                        <li>Idosos com dificuldade de orientação.</li>
+                    </ul>
+
+                    <h3>Objetivos</h3>
+                    <ul class="lista">
+                        <li>Propor um carrinho que avise sobre obstáculos próximos.</li>
+                        <li>Propor um aplicativo que ajude a organizar a lista e os gastos.</li>
+                        <li>Mostrar onde a matemática aparece em cada parte do projeto.</li>
+                        <li>Ouvir pessoas que poderiam usar a solução antes de decidir os próximos passos.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="secao secao-suave animar">
+                <div class="secao-texto">
+                    <h3>Por que ouvir quem vai usar</h3>
+                    <p>
+                        Quem tem deficiência visual conhece melhor do que ninguém
+                        as dificuldades do dia a dia. Um projeto feito só pelo
+                        olhar de quem enxerga pode errar justamente no que é
+                        mais importante. Por isso, a opinião dessas pessoas deve
+                        fazer parte da avaliação do carrinho e do aplicativo.
+                    </p>
+
+                    <h3>Como o carrinho e o aplicativo se relacionam</h3>
+                    <p>
+                        O carrinho cuida do que está ao redor: avisa quando há
+                        algo perto. O aplicativo cuida da compra em si: lista,
+                        produtos, preços e orçamento. Na primeira versão, cada
+                        um funciona separado. Ligar os dois é uma possibilidade
+                        para o futuro.
+                    </p>
+                </div>
+            </div>
+
+            <div class="secao" id="visita-cadv">
+                <div class="secao-texto">
+                    <h3>Visita ao CADV</h3>
+                    <p>
+                        O grupo fez uma visita ao CADV para conhecer de perto a
+                        realidade das pessoas com deficiência visual. A visita
+                        ajuda a conferir se o que o projeto imagina faz sentido
+                        para quem realmente poderia usá-lo.
+                    </p>
+                    <p>
+                        [preencher: data da visita e um breve relato do que o
+                        grupo viu e aprendeu. Escrever apenas o que foi confirmado.]
+                    </p>
+                </div>
+
+                <div class="secao-texto">
+                    <h4>Fotos da visita</h4>
+                </div>
+
+                <!-- Para usar uma foto real: troque a div "foto-reservada" por
+                     <img src="imagens/visita-cadv-01.jpg" alt="descrição da foto"> -->
+                <div class="galeria" role="group" aria-label="Fotos da visita ao CADV">
+                    <figure class="foto">
+                        <div class="foto-reservada" role="img" aria-label="Espaço reservado para uma foto">Foto a inserir: imagens/visita-cadv-01.jpg</div>
+                        <figcaption>[preencher: legenda da foto 1, conforme o que ela mostra]</figcaption>
+                    </figure>
+                    <figure class="foto">
+                        <div class="foto-reservada" role="img" aria-label="Espaço reservado para uma foto">Foto a inserir: imagens/visita-cadv-02.jpg</div>
+                        <figcaption>[preencher: legenda da foto 2, conforme o que ela mostra]</figcaption>
+                    </figure>
+                    <figure class="foto">
+                        <div class="foto-reservada" role="img" aria-label="Espaço reservado para uma foto">Foto a inserir: imagens/visita-cadv-03.jpg</div>
+                        <figcaption>[preencher: legenda da foto 3, conforme o que ela mostra]</figcaption>
+                    </figure>
+                    <figure class="foto">
+                        <div class="foto-reservada" role="img" aria-label="Espaço reservado para uma foto">Foto a inserir: imagens/visita-cadv-04.jpg</div>
+                        <figcaption>[preencher: legenda da foto 4, conforme o que ela mostra]</figcaption>
+                    </figure>
+                    <figure class="foto">
+                        <div class="foto-reservada" role="img" aria-label="Espaço reservado para uma foto">Foto a inserir: imagens/visita-cadv-05.jpg</div>
+                        <figcaption>[preencher: legenda da foto 5, conforme o que ela mostra]</figcaption>
+                    </figure>
+                    <figure class="foto">
+                        <div class="foto-reservada" role="img" aria-label="Espaço reservado para uma foto">Foto a inserir: imagens/visita-cadv-06.jpg</div>
+                        <figcaption>[preencher: legenda da foto 6, conforme o que ela mostra]</figcaption>
+                    </figure>
+                </div>
+
+                <div class="secao-texto entrevista-bloco" id="entrevista-cadv">
+                    <h4>Entrevista</h4>
+                    <p>
+                        [preencher: quem foi entrevistado (nome e função, se a
+                        pessoa autorizar), data e como a conversa aconteceu.]
+                    </p>
+
+                    <!-- Se a entrevista for em vídeo ou áudio, coloque aqui:
+                         <video controls src="midia/entrevista.mp4"></video>
+                         <audio controls src="midia/entrevista.mp3"></audio>
+                         e, se possível, escreva também a transcrição abaixo. -->
+
+                    <dl class="entrevista">
+                        <div class="entrevista-item">
+                            <dt>[preencher: pergunta 1]</dt>
+                            <dd>[preencher: resposta 1]</dd>
+                        </div>
+                        <div class="entrevista-item">
+                            <dt>[preencher: pergunta 2]</dt>
+                            <dd>[preencher: resposta 2]</dd>
+                        </div>
+                        <div class="entrevista-item">
+                            <dt>[preencher: pergunta 3]</dt>
+                            <dd>[preencher: resposta 3]</dd>
+                        </div>
+                    </dl>
+
+                    <p>
+                        [preencher: o que o grupo aprendeu com a entrevista e o
+                        que pretende mudar no projeto por causa dela. Escrever
+                        apenas o que foi dito ou confirmado.]
+                    </p>
+                </div>
+            </div>
+
+            <div class="secao secao-suave animar">
+                <div class="secao-texto">
+                    <h3>Em que ponto o projeto está</h3>
+                    <ul class="lista">
+                        <li><strong>Já feito:</strong> a proposta, o planejamento dos componentes e este site.</li>
+                        <li><strong>Planejado:</strong> montar a primeira versão do carrinho com Arduino UNO R3, criar o aplicativo e fazer testes dos alertas.</li>
+                        <li><strong>Possibilidades futuras:</strong> mensagens de voz, ligação entre aplicativo e carrinho, câmera, inteligência artificial e navegação interna.</li>
+                    </ul>
+                    <p class="aviso" role="note">
+                        O carrinho e o aplicativo ainda não foram concluídos nem testados.
+                        Nada aqui deve ser lido como resultado comprovado.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== COMO FUNCIONA ===================== -->
+        <section id="funcionamento" class="pagina" aria-labelledby="t-funcionamento">
+            <div class="cabecalho-pagina">
+                <h2 id="t-funcionamento">Como funciona o carrinho</h2>
+                <p>O funcionamento previsto para a primeira versão, passo a passo.</p>
+            </div>
+
+            <div class="secao">
+                <div class="secao-texto">
+                    <h3>A ideia do carrinho</h3>
+                    <p>
+                        O carrinho teria sensores que olham para a frente e para
+                        os lados. Quando algo se aproxima, ele emite um aviso
+                        sonoro e acende uma luz. Quem empurra o carrinho continua
+                        no controle: o aviso só serve de orientação.
+                    </p>
+                    <h3>Os três sensores</h3>
+                </div>
+
+                <div class="grade tres-colunas">
+                    <article class="cartao">
+                        <h4>Sensor frontal</h4>
+                        <p>Fica na frente e avisa sobre pessoas, produtos e outros carrinhos no caminho.</p>
+                    </article>
+                    <article class="cartao">
+                        <h4>Sensor lateral esquerdo</h4>
+                        <p>Avisa quando uma prateleira ou pessoa está perto do lado esquerdo.</p>
+                    </article>
+                    <article class="cartao">
+                        <h4>Sensor lateral direito</h4>
+                        <p>Faz o mesmo para o lado direito.</p>
+                    </article>
+                </div>
+
+                <div class="secao-texto">
+                    <h3>O carrinho no modelo 3D</h3>
+                    <p>
+                        Imagens do modelo digital do carrinho, com os sensores
+                        na frente e nas laterais, as luzes de aviso na parte de
+                        baixo e uma tela no cabo.
+                    </p>
+                </div>
+
+                <div class="galeria galeria-modelo" role="group" aria-label="Imagens do modelo 3D do carrinho">
+                    <figure class="foto">
+                        <img src="imagens/carrinho-01.png" alt="Modelo 3D de um carrinho de supermercado visto de frente e de cima, com uma bola colorida e uma garrafa dentro e sensores presos na grade.">
+                        <figcaption>Vista frontal em perspectiva.</figcaption>
+                    </figure>
+                    <figure class="foto">
+                        <img src="imagens/carrinho-02.png" alt="Modelo 3D do carrinho visto de lado, com sensores na lateral da cesta e duas luzes, uma vermelha e uma verde, na base.">
+                        <figcaption>Vista lateral, com os sensores e as luzes da base.</figcaption>
+                    </figure>
+                    <figure class="foto">
+                        <img src="imagens/carrinho-03.png" alt="Modelo 3D do carrinho visto de cima por trás, com uma tela escura no cabo e uma garrafa de água dentro da cesta.">
+                        <figcaption>Vista de cima, com a tela no cabo.</figcaption>
+                    </figure>
+                    <figure class="foto">
+                        <img src="imagens/carrinho-04.png" alt="Modelo 3D do carrinho visto por trás, com a tela no cabo e as luzes vermelha e verde na base.">
+                        <figcaption>Vista traseira.</figcaption>
+                    </figure>
+                    <figure class="foto">
+                        <img src="imagens/carrinho-05.png" alt="Modelo 3D do carrinho visto de trás e de lado, com a tela no cabo, uma garrafa na cesta e as luzes na base.">
+                        <figcaption>Vista traseira de lado.</figcaption>
+                    </figure>
+                </div>
+
+                <div class="secao-texto">
+                    <h3>Esquema do circuito</h3>
+                    <p>
+                        Desenho do circuito planejado: uma placa Arduino UNO
+                        ligada a três sensores ultrassônicos HC-SR04, a LEDs
+                        com resistores e a um buzzer, tudo numa protoboard.
+                    </p>
+                    <figure class="foto foto-larga">
+                        <img src="imagens/esquema-circuito.png" alt="Esquema de circuito com uma placa Arduino UNO, uma protoboard, três sensores ultrassônicos HC-SR04, três LEDs com resistores e um buzzer, ligados por fios coloridos.">
+                        <figcaption>Esquema de ligação dos componentes.</figcaption>
+                    </figure>
+                    <p class="aviso" role="note">
+                        São imagens do projeto no computador (modelo 3D e
+                        esquema de ligação), feitas para planejar o carrinho.
+                        Elas não mostram resultado de teste.
+                    </p>
+                </div>
+            </div>
+
+            <div class="secao secao-suave animar">
+                <div class="secao-texto">
+                    <h3>Como o sensor estima a distância</h3>
+                    <p>
+                        O sensor ultrassônico emite um som agudo que a gente não
+                        escuta. Esse som bate no objeto e volta. O sensor mede o
+                        tempo da ida e volta, e com esse tempo é possível
+                        calcular a distância. Quanto mais demora o eco, mais
+                        longe está o objeto.
+                    </p>
+
+                    <h3>O controlador: Arduino UNO R3</h3>
+                    <p>
+                        O Arduino UNO R3 é uma placa que lê os sensores e decide
+                        quando acionar os LEDs e o buzzer. Ele está previsto como
+                        controlador da primeira versão. A programação ainda
+                        precisa ser feita e testada.
+                    </p>
+
+                    <h3>LEDs e buzzer</h3>
+                    <p>
+                        O buzzer emite o aviso sonoro. Os LEDs mostram visualmente
+                        qual sensor detectou algo, o que também ajuda quem tem
+                        baixa visão e quem acompanha a pessoa. Como nada deve
+                        ser comunicado só por som ou só por luz, os dois ficam
+                        juntos.
+                    </p>
+
+                    <h3>Bateria, interruptor e organização</h3>
+                    <p>
+                        A proposta prevê uma bateria para alimentar o conjunto e
+                        um interruptor para ligar e desligar com facilidade.
+                        Os componentes precisam ficar bem presos e protegidos
+                        no carrinho, com os sensores posicionados de forma que
+                        nada os cubra. O tipo de bateria e a posição de cada
+                        peça ainda serão definidos.
+                    </p>
+                </div>
+            </div>
+
+            <div class="secao animar">
+                <div class="secao-texto">
+                    <h3>Funcionamento esperado, em sequência</h3>
+                    <ol class="lista">
+                        <li>A pessoa liga o carrinho pelo interruptor.</li>
+                        <li>O Arduino manda cada sensor medir, um de cada vez.</li>
+                        <li>Cada sensor envia o tempo do eco e o Arduino calcula a distância.</li>
+                        <li>O Arduino compara a distância com as faixas definidas para teste.</li>
+                        <li>Se algo estiver perto, o LED daquele lado acende e o buzzer toca.</li>
+                        <li>A pessoa decide o que fazer: parar, desviar ou seguir com cuidado.</li>
+                    </ol>
+                    <p>
+                        Os sensores precisam medir de forma coordenada, um por
+                        vez ou em sequência. Se medissem ao mesmo tempo, o som
+                        de um poderia ser captado por outro e gerar leituras
+                        erradas.
+                    </p>
+
+                    <p class="aviso" role="note">
+                        O carrinho não desvia sozinho, não freia sozinho e não
+                        garante detectar todos os obstáculos. Na versão manual,
+                        ele apenas ajuda a orientar. Ele não substitui a atenção
+                        da pessoa nem outros recursos que ela já usa, como a bengala.
+                    </p>
+                </div>
+            </div>
+
+            <div class="secao secao-suave animar">
+                <div class="secao-texto">
+                    <h3>Limitações dos sensores</h3>
+                    <ul class="lista">
+                        <li>Objetos macios, como roupas, podem absorver o som e não ser percebidos.</li>
+                        <li>Superfícies inclinadas podem desviar o som e causar leituras erradas.</li>
+                        <li>Objetos finos ou pequenos podem passar despercebidos.</li>
+                        <li>Barulho e interferência entre sensores podem atrapalhar a medição.</li>
+                        <li>O sensor mede apenas numa direção e num ângulo limitado.</li>
+                    </ul>
+
+                    <h3>Testes necessários</h3>
+                    <ul class="lista">
+                        <li>Medir objetos de materiais e tamanhos diferentes e comparar com uma trena.</li>
+                        <li>Conferir se os três sensores medem em sequência sem interferir uns nos outros.</li>
+                        <li>Ajustar as faixas de distância até os alertas ficarem claros.</li>
+                        <li>Avaliar o volume e o padrão do buzzer num ambiente com barulho.</li>
+                        <li>Pedir a opinião de pessoas com deficiência visual sobre os alertas.</li>
+                    </ul>
+                    <p>Nenhum desses testes foi realizado até agora.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== MAPA ===================== -->
+        <section id="mapa" class="pagina" aria-labelledby="t-mapa">
+            <div class="cabecalho-pagina">
+                <h2 id="t-mapa">Supermercados em Mossoró</h2>
+                <p>
+                    Mapa com os supermercados de Mossoró, no Rio Grande do Norte,
+                    para consultar localização e rotas.
+                </p>
+            </div>
+
+            <div class="secao">
+                <div class="secao-texto">
+                    <h3>Consulte o mapa</h3>
+                    <p>
+                        O mapa abaixo vem do Google Maps. Nele é possível ver
+                        onde cada mercado fica, traçar rotas e conferir os
+                        horários que o próprio serviço informa.
+                    </p>
+
+                    <div class="mapa">
+                        <iframe
+                            title="Mapa de supermercados em Mossoró, RN"
+                            src="https://maps.google.com/maps?q=supermercados%20em%20Mossor%C3%B3%20RN&output=embed"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <p class="texto-apoio">
+                        Se o mapa não carregar, verifique a conexão com a internet
+                        ou abra a pesquisa direto no Google Maps.
+                    </p>
+
+                    <a
+                        class="botao"
+                        href="https://www.google.com/maps/search/supermercados+em+Mossor%C3%B3+RN/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Abrir no Google Maps (abre em nova aba)">
+                        Abrir no Google Maps
+                    </a>
+                </div>
+            </div>
+
+            <div class="secao secao-suave">
+                <div class="secao-texto">
+                    <h3>Sobre a acessibilidade dos locais</h3>
+                    <p>
+                        O mapa mostra onde os supermercados ficam, mas não diz
+                        se cada um tem recursos para pessoas com deficiência
+                        visual. Ele também não mostra corredores, setores ou a
+                        posição dos produtos dentro das lojas.
+                    </p>
+                    <p>
+                        Antes de ir a um mercado, vale ligar ou conversar com o
+                        estabelecimento para perguntar sobre atendimento,
+                        circulação entre os corredores e formas de apoio
+                        disponíveis.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== CONTATO ===================== -->
+        <section id="contato" class="pagina" aria-labelledby="t-contato">
+            <div class="cabecalho-pagina">
+                <h2 id="t-contato">Contato</h2>
+                <p>Informações do grupo e um formulário para dúvidas, sugestões e opiniões sobre o projeto.</p>
+            </div>
+
+            <div class="secao">
+                <div class="secao-texto">
+                    <h3>Informações do projeto</h3>
+                    <ul class="lista">
+                        <li><strong>Projeto:</strong> Mercado Acessível</li>
+                        <li><strong>Instituição:</strong> SENAC RN</li>
+                        <li><strong>Curso ou turma:</strong> [preencher: curso ou turma]</li>
+                        <li><strong>Integrantes:</strong> [preencher: nomes dos integrantes]</li>
+                    </ul>
+                    <p>
+                        O objetivo do trabalho é propor um carrinho com sensores e
+                        um aplicativo de apoio às compras para pessoas com
+                        deficiência visual, baixa visão e idosos com dificuldade
+                        de orientação.
+                    </p>
+                </div>
+            </div>
+
+            <div class="secao secao-suave">
+                <div class="secao-texto">
+                    <h3>Envie uma mensagem</h3>
+                    <p>
+                        Ao clicar em Enviar, o seu aplicativo de e-mail abre com a
+                        mensagem já escrita. É só conferir e enviar por lá. O site
+                        não guarda nenhum dado.
+                    </p>
+
+                    <form class="formulario" id="formulario-contato">
+                        <div class="campo">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" autocomplete="name" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="telefone">Telefone <span class="dica">(opcional)</span></label>
+                            <input type="tel" id="telefone" name="telefone" autocomplete="tel">
+                        </div>
+
+                        <div class="campo">
+                            <label for="tipo">Tipo de mensagem</label>
+                            <select id="tipo" name="tipo">
+                                <option>Dúvida</option>
+                                <option>Sugestão</option>
+                                <option>Opinião sobre o projeto</option>
+                                <option>Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="assunto">Assunto</label>
+                            <input type="text" id="assunto" name="assunto" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+                        </div>
+
+                        <button class="botao" type="submit">Enviar</button>
+                        <p class="texto-apoio" id="aviso-formulario" role="status"></p>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
- 
+
     <footer class="rodape">
-        <a href="index.html" class="logo logo-rodape">Mercado<span>Acessível</span></a>
+        <a href="#inicio" class="logo logo-rodape" aria-label="Mercado Acessível, voltar ao início da página">Mercado<span>Acessível</span></a>
         <p>Projeto acadêmico — SENAC RN</p>
         <p class="copyright">© 2026 Mercado Acessível</p>
     </footer>
+
 </body>
 </html>
