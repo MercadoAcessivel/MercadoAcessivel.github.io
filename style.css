@@ -1,66 +1,71 @@
-
 :root {
     --azul: #102A43;
     --laranja: #F28C28;
-    --laranja-escuro: #D96F10;
+    --laranja-escuro: #B35400;
     --branco: #FFFFFF;
     --fundo: #F4F7FA;
     --texto: #243746;
     --texto-suave: #526575;
     --borda: #D5DDE5;
 }
-
+ 
+/* Gerais */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
+ 
 html {
     scroll-behavior: smooth;
 }
-
+ 
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.7;
     color: var(--texto);
     background: var(--branco);
 }
-
+ 
+a {
+    color: inherit;
+}
+ 
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--laranja);
+    outline-offset: 3px;
+}
+ 
+p {
+    margin-bottom: 16px;
+}
+ 
+img {
+    max-width: 100%;
+    display: block;
+}
+ 
 h1, h2, h3 {
     color: var(--azul);
     line-height: 1.25;
 }
-
+ 
 h1 {
     font-size: clamp(2.2rem, 5vw, 3.5rem);
 }
-
+ 
 h2 {
     font-size: clamp(1.5rem, 3vw, 2.1rem);
     margin-bottom: 16px;
 }
-
+ 
 h3 {
-    margin-bottom: 10px;
     font-size: 1.2rem;
+    margin-bottom: 10px;
 }
-
-p {
-    margin-bottom: 16px;
-}
-
-a {
-    color: inherit;
-}
-
-a:focus-visible {
-    outline: 3px solid var(--laranja);
-    outline-offset: 3px;
-}
-
-
-
+ 
+/* Cabeçalho e navegação */
 .cabecalho {
     display: flex;
     align-items: center;
@@ -69,26 +74,26 @@ a:focus-visible {
     padding: 18px 7%;
     border-bottom: 1px solid var(--borda);
 }
-
+ 
 .logo {
     color: var(--azul);
     text-decoration: none;
-    font-size: 1.3rem;
     font-weight: bold;
+    font-size: 1.3rem;
     white-space: nowrap;
 }
-
+ 
 .logo span {
     color: var(--laranja);
 }
-
+ 
 .navegacao {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     gap: 6px;
 }
-
+ 
 .navegacao a {
     padding: 8px 12px;
     color: var(--azul);
@@ -96,92 +101,60 @@ a:focus-visible {
     font-size: 0.95rem;
     border-radius: 6px;
 }
-
+ 
 .navegacao a:hover,
 .navegacao a.ativo {
     background: var(--fundo);
     color: var(--laranja-escuro);
 }
-
-
-
+ 
+/* Seção inicial */
 .hero {
     display: grid;
     grid-template-columns: 1.3fr 0.7fr;
     align-items: center;
     gap: 48px;
-    padding: 64px 7%;
+    padding: 80px 7%;
     background: var(--fundo);
 }
-
+ 
 .hero h1 {
     margin: 12px 0 18px;
 }
-
+ 
 .hero p {
     max-width: 650px;
     color: var(--texto-suave);
     font-size: 1.1rem;
 }
-
+ 
 .etiqueta {
+    display: inline-block;
     color: var(--laranja-escuro);
     font-size: 0.9rem;
     font-weight: bold;
 }
-
-.hero-lateral {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    min-width: 0;
-}
-
+ 
 .hero-destaque {
-    padding: 26px;
+    padding: 30px;
     background: var(--branco);
     border: 1px solid var(--borda);
     border-radius: 12px;
 }
-
+ 
 .hero-destaque p {
     margin-bottom: 0;
     font-size: 1rem;
 }
-
-
-
-.galeria {
-    width: 100%;
-}
-
-.foto {
-    margin: 0;
-}
-
-.foto img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border: 1px solid var(--borda);
-    border-radius: 8px;
-}
-
-.foto figcaption {
-    margin-top: 8px;
-    color: var(--texto-suave);
-    font-size: 0.9rem;
-}
-
-
-
+ 
+/* Botões */
 .botoes {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
     margin-top: 24px;
 }
-
+ 
 .botao {
     display: inline-block;
     padding: 12px 22px;
@@ -192,83 +165,185 @@ a:focus-visible {
     text-decoration: none;
     font-weight: bold;
 }
-
+ 
 .botao:hover {
     background: var(--laranja-escuro);
     border-color: var(--laranja-escuro);
     color: var(--branco);
 }
-
+ 
 .botao-secundario {
     background: transparent;
     border-color: var(--borda);
 }
-
+ 
 .botao-secundario:hover {
     background: var(--azul);
     border-color: var(--azul);
 }
-
-
+ 
+/* Seções de conteúdo */
 .secao {
     padding: 64px 7%;
 }
-
+ 
 .secao-suave {
     background: var(--fundo);
 }
-
+ 
 .secao-texto {
     max-width: 800px;
     margin: 0 auto;
 }
-
+ 
+.secao-texto h2:not(:first-child) {
+    margin-top: 36px;
+}
+ 
 .secao-texto p {
     color: var(--texto-suave);
 }
-
+ 
+.cabecalho-pagina {
+    padding: 60px 7%;
+    text-align: center;
+    background: var(--fundo);
+}
+ 
+.cabecalho-pagina h1 {
+    max-width: 900px;
+    margin: 0 auto 16px;
+}
+ 
+.cabecalho-pagina p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--texto-suave);
+    font-size: 1.1rem;
+}
+ 
 .titulo-secao {
     max-width: 760px;
     margin: 0 auto 32px;
     text-align: center;
 }
-
+ 
 .titulo-secao p {
     color: var(--texto-suave);
 }
-
-
-
+ 
+/* Cartões */
 .grade {
     display: grid;
     gap: 20px;
 }
-
+ 
 .tres-colunas {
     grid-template-columns: repeat(3, 1fr);
 }
-
+ 
+.dois-colunas {
+    grid-template-columns: repeat(2, 1fr);
+}
+ 
 .cartao {
     padding: 24px;
     background: var(--branco);
     border: 1px solid var(--borda);
     border-radius: 12px;
 }
-
+ 
 .cartao p {
     margin-bottom: 0;
     color: var(--texto-suave);
 }
-
+ 
 .link {
     display: inline-block;
     margin-top: 10px;
     color: var(--laranja-escuro);
     font-weight: bold;
 }
-
-
-
+ 
+/* Galeria de fotos */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 24px;
+}
+ 
+.foto img,
+.foto-reservada {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 10px;
+}
+ 
+.foto img {
+    object-fit: cover;
+}
+ 
+.foto-reservada {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    text-align: center;
+    border: 2px dashed var(--borda);
+    background: var(--fundo);
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+}
+ 
+.foto figcaption {
+    margin-top: 8px;
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+}
+ 
+/* Listas e exemplos de matemática */
+.lista {
+    margin: 16px 0 24px 24px;
+    color: var(--texto-suave);
+}
+ 
+.lista li {
+    padding: 4px 0;
+}
+ 
+.conta {
+    margin: 16px 0;
+    padding: 16px 20px;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    background: var(--branco);
+}
+ 
+.conta strong {
+    display: block;
+    color: var(--azul);
+    font-size: 1.1rem;
+}
+ 
+.conta p {
+    margin: 6px 0 0;
+}
+ 
+/* Avisos e destaques */
+.aviso {
+    margin-top: 24px;
+    padding: 18px 20px;
+    border-left: 5px solid var(--laranja);
+    border-radius: 6px;
+    background: var(--fundo);
+    color: var(--texto);
+}
+ 
+.secao-suave .aviso {
+    background: var(--branco);
+}
+ 
 .faixa {
     display: flex;
     align-items: center;
@@ -278,124 +353,514 @@ a:focus-visible {
     background: var(--azul);
     color: var(--branco);
 }
-
+ 
 .faixa h2 {
     color: var(--branco);
 }
-
+ 
 .faixa p {
     margin-bottom: 0;
     color: #E0E8EF;
 }
-
+ 
 .faixa .botao {
     flex-shrink: 0;
     background: var(--branco);
     border-color: var(--branco);
 }
-
+ 
 .faixa .botao:hover {
     background: var(--laranja);
     border-color: var(--laranja);
     color: var(--azul);
 }
-
-
-
+ 
+.mapa {
+    overflow: hidden;
+    height: 480px;
+    margin: 24px 0 16px;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+}
+ 
+.mapa iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+ 
+.texto-apoio {
+    font-size: 0.95rem;
+}
+ 
+/* Rodapé */
 .rodape {
     padding: 36px 7%;
     background: #091C2D;
     color: #E0E8EF;
     text-align: center;
 }
-
+ 
 .logo-rodape {
     display: inline-block;
     margin-bottom: 12px;
     color: var(--branco);
 }
-
+ 
 .rodape p {
     margin-bottom: 6px;
 }
-
+ 
 .copyright {
     color: #B7C5D2;
     font-size: 0.9rem;
 }
-
-
-
+ 
+/* Animação ao rolar (só funciona se o JavaScript ligar) */
 .com-js .animar {
     opacity: 0;
     transition: opacity 0.5s;
 }
-
+ 
 .com-js .animar.visivel {
     opacity: 1;
 }
-
-
-
+ 
+/* Telas menores */
 @media (max-width: 950px) {
     .cabecalho {
         flex-direction: column;
         align-items: flex-start;
     }
-
+ 
     .navegacao {
         justify-content: flex-start;
     }
-
+ 
     .hero {
         grid-template-columns: 1fr;
-        gap: 32px;
+        padding: 56px 7%;
     }
-
-    .tres-colunas {
+ 
+    .tres-colunas,
+    .galeria {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
+ 
 @media (max-width: 650px) {
     .cabecalho,
     .hero,
     .secao,
+    .cabecalho-pagina,
     .faixa {
         padding-left: 5%;
         padding-right: 5%;
     }
-
-    .secao {
+ 
+    .secao,
+    .cabecalho-pagina {
         padding-top: 44px;
         padding-bottom: 44px;
     }
-
-    .tres-colunas {
+ 
+    .tres-colunas,
+    .dois-colunas,
+    .galeria {
         grid-template-columns: 1fr;
     }
-
+ 
     .faixa {
         flex-direction: column;
         align-items: flex-start;
     }
-
+ 
     .botoes {
         flex-direction: column;
     }
-
+ 
     .botao {
         text-align: center;
     }
+ 
+    .mapa {
+        height: 380px;
+    }
 }
-
+ 
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
     }
-
+ 
     .com-js .animar {
         opacity: 1;
         transition: none;
     }
+}
+ 
+/* Formulário de contato */
+.formulario {
+    margin-top: 24px;
+}
+ 
+.campo {
+    margin-bottom: 18px;
+}
+ 
+.formulario label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--azul);
+    font-weight: bold;
+}
+ 
+.dica {
+    color: var(--texto-suave);
+    font-weight: normal;
+}
+ 
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    background: var(--branco);
+    color: var(--texto);
+    font: inherit;
+}
+ 
+.formulario textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+ 
+.formulario input:focus-visible,
+.formulario select:focus-visible,
+.formulario textarea:focus-visible {
+    outline: 3px solid var(--laranja);
+    outline-offset: 2px;
+}
+ 
+button.botao {
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+ 
+.formulario .texto-apoio {
+    margin-top: 14px;
+}
+
+/* ===== Acessibilidade (TalkBack, teclado, fonte e contraste) ===== */
+
+html {
+    font-size: var(--tam-fonte, 100%);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.pular-conteudo {
+    position: absolute;
+    left: 12px;
+    top: -80px;
+    z-index: 100;
+    padding: 12px 18px;
+    background: var(--azul);
+    color: var(--branco);
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.pular-conteudo:focus {
+    top: 12px;
+}
+
+main:focus {
+    outline: none;
+}
+
+.acessibilidade {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 8px 7%;
+    background: var(--azul);
+    color: var(--branco);
+    font-size: 0.95rem;
+}
+
+.acessibilidade span.rotulo {
+    margin-right: 4px;
+    font-weight: bold;
+}
+
+.acessibilidade button {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 6px 14px;
+    background: transparent;
+    color: inherit;
+    border: 2px solid currentColor;
+    border-radius: 6px;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.acessibilidade button:hover,
+.acessibilidade button[aria-pressed="true"] {
+    background: var(--laranja);
+    border-color: var(--laranja);
+    color: #102A43;
+}
+
+.acessibilidade button:focus-visible {
+    outline: 3px solid var(--laranja);
+    outline-offset: 3px;
+}
+
+.navegacao a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+}
+
+.link,
+.secao-texto p a {
+    text-decoration: underline;
+}
+
+@media (max-width: 650px) {
+    .acessibilidade {
+        justify-content: flex-start;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+/* Alto contraste */
+html.alto-contraste {
+    --azul: #FFFFFF;
+    --texto: #FFFFFF;
+    --texto-suave: #FFFFFF;
+    --borda: #FFFFFF;
+    --fundo: #000000;
+    --branco: #000000;
+    --laranja: #FFD700;
+    --laranja-escuro: #FFD700;
+}
+
+html.alto-contraste body {
+    background: #000;
+    color: #fff;
+}
+
+html.alto-contraste .botao,
+html.alto-contraste .botao:hover {
+    color: #000;
+}
+
+html.alto-contraste .botao-secundario {
+    color: #fff;
+}
+
+html.alto-contraste .botao-secundario:hover {
+    background: #fff;
+    border-color: #fff;
+    color: #000;
+}
+
+html.alto-contraste .faixa {
+    background: #000;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+html.alto-contraste .faixa h2,
+html.alto-contraste .faixa p {
+    color: #fff;
+}
+
+html.alto-contraste .faixa .botao {
+    background: #FFD700;
+    border-color: #FFD700;
+    color: #000;
+}
+
+html.alto-contraste .rodape {
+    background: #000;
+    border-top: 2px solid #fff;
+    color: #fff;
+}
+
+html.alto-contraste .logo-rodape,
+html.alto-contraste .copyright {
+    color: #fff;
+}
+
+html.alto-contraste .acessibilidade {
+    background: #fff;
+    color: #000;
+}
+
+html.alto-contraste .acessibilidade button:hover,
+html.alto-contraste .acessibilidade button[aria-pressed="true"] {
+    background: #000;
+    border-color: #000;
+    color: #FFD700;
+}
+
+html.alto-contraste .pular-conteudo {
+    background: #FFD700;
+    color: #000;
+}
+
+html.alto-contraste .navegacao a.ativo {
+    text-decoration: underline;
+}
+
+/* ===== Ajustes da página única ===== */
+
+/* O cabeçalho fica fixo no topo em telas grandes; as seções param abaixo dele */
+html {
+    scroll-padding-top: 90px;
+}
+
+.cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--branco);
+}
+
+@media (max-width: 950px) {
+    html {
+        scroll-padding-top: 16px;
+    }
+
+    .cabecalho {
+        position: static;
+    }
+}
+
+/* Separa visualmente o início de cada seção */
+.pagina > .cabecalho-pagina {
+    border-top: 1px solid var(--borda);
+}
+
+/* Hierarquia de títulos: h1 (hero) > h2 (seções) > h3 > h4 */
+.secao-texto h3:not(:first-child) {
+    margin-top: 36px;
+}
+
+.secao-texto h3 {
+    font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+}
+
+h4 {
+    margin-bottom: 8px;
+    color: var(--azul);
+    font-size: 1.1rem;
+    line-height: 1.3;
+}
+
+.secao-texto h4:not(:first-child) {
+    margin-top: 28px;
+}
+
+.titulo-secao h3 {
+    font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+}
+
+.cartao h3,
+.cartao h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.conta .conta-titulo {
+    margin: 0 0 4px;
+    color: var(--azul);
+    font-weight: bold;
+}
+
+/* ===== Imagens do carrinho e esquema do circuito ===== */
+.galeria-modelo {
+    margin-bottom: 40px;
+}
+
+.galeria-modelo .foto img {
+    aspect-ratio: auto;
+    height: auto;
+    border: 1px solid var(--borda);
+    background: #FFFFFF;
+}
+
+.foto-larga {
+    max-width: 640px;
+    margin: 20px auto 0;
+}
+
+.foto-larga img {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    background: #FFFFFF;
+}
+
+.secao > .grade + .secao-texto,
+.secao > .galeria + .secao-texto {
+    margin-top: 40px;
+}
+
+/* ===== Entrevista (visita ao CADV) ===== */
+.entrevista-bloco {
+    margin-top: 48px;
+}
+
+.entrevista-bloco audio,
+.entrevista-bloco video {
+    display: block;
+    width: 100%;
+    margin: 16px 0;
+}
+
+.entrevista {
+    margin: 20px 0 24px;
+}
+
+.entrevista-item {
+    margin-bottom: 14px;
+    padding: 16px 20px;
+    border: 1px solid var(--borda);
+    border-left: 5px solid var(--laranja);
+    border-radius: 8px;
+    background: var(--branco);
+}
+
+.entrevista dt {
+    margin-bottom: 6px;
+    color: var(--azul);
+    font-weight: bold;
+}
+
+.entrevista dd {
+    margin: 0;
+    color: var(--texto-suave);
 }
